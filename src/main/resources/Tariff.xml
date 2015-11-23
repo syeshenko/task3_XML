@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tariff xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="Tariff.xsd">
+
+    <id>t1</id>
+        <Name>Simple</Name>
+        <Operator_Name>Beeline</Operator_Name>
+        <Payroll>1000</Payroll>
+        <Call_Price>
+            <OutgoingCallToBeelineNumbers>5</OutgoingCallToBeelineNumbers>
+            <OutgoingCallToOtherOperators>7</OutgoingCallToOtherOperators>
+            <OutgoingCallToLandlineNumbers>8</OutgoingCallToLandlineNumbers>
+        </Call_Price>
+        <SMS_Price>7</SMS_Price>
+        <Parameters>
+            <FavoriteNumbersAmount>3</FavoriteNumbersAmount>
+            <BillingIncrementSeconds>1</BillingIncrementSeconds>
+            <ActivationFee>200</ActivationFee>
+        </Parameters>
+
+
+        <id>t2</id>
+        <Name>Premium</Name>
+        <Operator_Name>Beeline</Operator_Name>
+        <Payroll>5000</Payroll>
+        <Call_Price>
+            <OutgoingCallToBeelineNumbers>0</OutgoingCallToBeelineNumbers>
+            <OutgoingCallToOtherOperators>3</OutgoingCallToOtherOperators>
+            <OutgoingCallToLandlineNumbers>3</OutgoingCallToLandlineNumbers>
+        </Call_Price>
+        <SMS_Price>5</SMS_Price>
+        <Parameters>
+            <FavoriteNumbersAmount>15</FavoriteNumbersAmount>
+            <BillingIncrementSeconds>1</BillingIncrementSeconds>
+            <ActivationFee>200</ActivationFee>
+        </Parameters>
+
+
+</Tariff>

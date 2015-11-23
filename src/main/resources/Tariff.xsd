@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified">
+
+    <xs:element name="Tariff" type="xs:string"/>
+
+    <xs:element name="id" type="xs:ID">
+            <xs:simpleType>
+                <xs:restriction base="xs:ID">
+                    <xs:pattern value="[t][0-9]+"/>
+                </xs:restriction>
+            </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="Name" type="xs:string"/>
+
+    <xs:element name="Operator_Name" type="xs:string"/>
+
+    <xs:element name="Payroll" type="xs:positiveInteger"/>
+
+    <xs:complexType name="Call_Price">
+        <xs:sequence>
+            <xs:element name="OutgoingCallToBeelineNumbers" type="xs:positiveInteger" />
+            <xs:element name="OutgoingCallToOtherOperators" type="xs:positiveInteger" />
+            <xs:element name="OutgoingCallToLandlineNumbers" type="xs:positiveInteger" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="SMS_Price" type="xs:positiveInteger"/>
+
+    <xs:complexType name="Parameters">
+        <xs:sequence>
+            <xs:element name="FavoriteNumbersAmount" type="xs:positiveInteger"/>
+            <xs:element name="BillingIncrementSeconds" type="xs:positiveInteger"/>
+
+            <xs:element name="ActivationFee" type="xs:positiveInteger"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
